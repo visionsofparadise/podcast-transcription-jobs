@@ -1,0 +1,49 @@
+{
+	"name": "podcast-transcription-jobs",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"compile": "tsc",
+		"unit": "jest unit",
+		"build": "parcel build ./src/handlers/*.ts -d build --target node --bundle-node-modules --no-source-maps",
+		"synth": "cdk synth",
+		"integration": "jest integration"
+	},
+	"dependencies": {
+		"envlog": "^1.0.3"
+	},
+	"devDependencies": {
+		"@aws-cdk/aws-iam": "^1.71.0",
+		"@aws-cdk/aws-lambda": "^1.71.0",
+		"@aws-cdk/aws-lambda-event-sources": "^1.71.0",
+		"@aws-cdk/aws-s3": "^1.71.0",
+		"@aws-cdk/core": "^1.71.0",
+		"@types/aws-lambda": "^8.10.64",
+		"@types/jest": "^24.9.1",
+		"@types/node": "^10.12.18",
+		"aws-cdk": "^1.71.0",
+		"aws-lambda": "^1.0.1",
+		"aws-sdk": "^2.771.0",
+		"jest": "^24.9.0",
+		"parcel-bundler": "^1.12.4",
+		"parcel-plugin-externals": "^0.5.1",
+		"ts-jest": "^24.2.0",
+		"ts-loader": "^8.0.2",
+		"ts-node": "^8.5.4",
+		"tslint": "^5.20.1",
+		"tslint-config-prettier": "^1.18.0",
+		"tslint-plugin-prettier": "^2.1.0",
+		"typescript": "^3.2.4"
+	},
+	"externals": [
+		"aws-sdk"
+	],
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/visionsofparadise/podcast-transcription-jobs/issues"
+	},
+	"homepage": "https://github.com/visionsofparadise/podcast-transcription-jobs#readme"
+}

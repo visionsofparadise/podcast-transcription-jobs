@@ -1,0 +1,42 @@
+{
+	"compilerOptions": {
+		"lib": ["ES2018"],
+		"module": "commonjs",
+		"target": "ES2018",
+		"strict": true,
+		"moduleResolution": "node",
+		"sourceMap": false,
+		"rootDir": "src",
+		"outDir": "dist",
+		"baseUrl": ".",
+		"paths": {
+			"*": ["node_modules/*", "src/types/d/*"]
+		},
+		"esModuleInterop": true,
+		"removeComments": true,
+		"allowUmdGlobalAccess": true,
+		"noImplicitAny": true,
+		"strictNullChecks": true,
+		"strictFunctionTypes": true,
+		"noImplicitThis": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"resolveJsonModule": true,
+		"allowJs": true,
+		"plugins": [
+			{
+				"name": "typescript-tslint-plugin",
+				"alwaysShowRuleFailuresAsWarnings": true,
+				"ignoreDefinitionFiles": true,
+				"configFile": "./tslint.json",
+				"suppressWhileTypeErrorsPresent": false
+			}
+		]
+	},
+	"include": ["src/**/*.ts"],
+	"exclude": ["dist/", "src/**/*.test.ts", "node_modules"],
+	"types": ["jest"],
+	"typeRoots": ["./src/types", "node_modules/@types"]
+}
